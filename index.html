@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Corrected FontAwesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <nav>
+        <div class="header-container">
+            <h1 class="app-title" aria-label="Weather Application">Weather App</h1>
+            <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Dark Mode" aria-pressed="false">
+                <span class="theme-icon" aria-hidden="true">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="weather-container">
+            <div class="current-weather">
+                <div class="weather-info" aria-live="polite">
+                    <!-- Display weather information here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <form class="location-form" aria-label="Location Search Form">
+        <label for="location">Enter a country or city:</label>
+        <div class="input-container">
+            <input type="text" id="location" placeholder="Search for a country or city..." aria-label="Location Input">
+            <button type="button" onclick="getWeather()" aria-label="Show Weather Button" style="font-weight: bold;">
+                <!-- Use FontAwesome search icon -->
+                <span class="search-icon" aria-hidden="true"><i class="fas fa-search"></i></span> Show Weather
+            </button>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
